@@ -10,6 +10,9 @@
   <!-- Adding styling info for the map -->
   <style type="text/css">
     /* Add a CSS rule that selects an element with the ID "mapId" and gives it a height of 600 pixels */
+    #mapId {
+      height: 600px;
+    }
   </style>
   <!-- Adding styling info for page layout by reading in a CSS file -->
   <link rel="stylesheet" href="styles.css">
@@ -28,17 +31,22 @@
   <br>
 
   <!-- Add a div with id="mapId" to give the map somewhere to go -->
-  
+  <div id="mapId"></div>
+
   <script>
     // Create a variable called "map" to house your Leaflet map and all of its functionality
+    var map = L.map('mapId').setView([37.754700, -122.420790], 14);
 
-    /* 
-     * Use Leaflet's tileLayer method to create a new tile layer, then add it to the map 
+    /*
+     * Use Leaflet's tileLayer method to create a new tile layer, then add it to the map
      ** Reference: https://leafletjs.com/reference-1.6.0.html#tilelayer
      */
+     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+     }).addTo(map);
 
-    /* Try changing out the tile source for something else. Hint: you can find 
-     * lots of tile sources here: https://leaflet-extras.github.io/leaflet-providers/preview/ 
+    /* Try changing out the tile source for something else. Hint: you can find
+     * lots of tile sources here: https://leaflet-extras.github.io/leaflet-providers/preview/
      */
 
   </script>
