@@ -36,17 +36,20 @@
     <li><a href="Mapbox-gl-js-bm.html" target="_self">Output 4</a></li>
   </ul>
   <br>
-</body>
 
   <!-- Container for the map -->
-<body>
   <div id="mapId"></div>
 
   <script>
         // Mapbox GL JS requires a token
         mapboxgl.accessToken = 'pk.eyJ1IjoicHJpc2NpbGxhYWhuIiwiYSI6ImNrZ2JlcDczNTAxNXUyc282NGFsN3JxbWcifQ.AeEv5eaed1uUkW1OkXJcAQ';
 
-        // Initialize the map
+        /* Initialize the map with:
+         *  container
+         *  style
+         *  center
+         *  zoom
+         */
         var map = new mapboxgl.Map({
           container: 'mapId',
           style: 'mapbox://styles/mapbox/streets-v11',
