@@ -1,14 +1,16 @@
 ul {
  list-style-type: none;
- margin: 1px;
  padding: 1px;
  overflow: hidden;
- background-color: white;
+ background-color: #EFC3A5;
+ font-family: tahoma;
+ font-size: 75%;
+ font-weight: bold;
 }
 
 li {
  float: left;
- border-right: 2px solid white;
+ border-right: 1px solid white;
 }
 
 /* Add a border to all( but not the last) list items */
@@ -18,7 +20,7 @@ li:last-child {
 
 li a {
  display: block;
- color: black;
+ color: white;
  text-align: left;
  padding: 15px 17px;
  text-decoration: none;
@@ -26,9 +28,48 @@ li a {
 
 /* Links will change color when hovered over */
 li a:hover {
- background-color: #a09f9f;
+ background-color: #AFAFAF;
 }
 
 .active {
- background-color: #a09f9f;
+ background-color: #AFAFAF;
+}
+
+/* Font */
+h1 {
+  text-align: center;
+  color: white;
+  font-family: tahoma;
+  font-size: 230%;
+  line-height: 0.5;
+  padding-top: 1%
+}
+
+h2 {
+  text-align: center;
+  color: white;
+  font-family: tahoma;
+  font-size: 150%;
+}
+
+p {
+  text-align: center;
+  color: white;
+  font-family: tahoma;
+  font-size: 80%;
+}
+
+/* Center */
+.container {
+  height: 100px;
+  position: relative;
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
